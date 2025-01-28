@@ -2,6 +2,7 @@
 /* No media query for `xs` since this is the default in Bootstrap */
 .container {
     --column-size: 12;
+    --spacer: 30px;
 
     width: 100%;
     margin-left: auto;
@@ -17,11 +18,19 @@
 .row {
     display: flex;
     flex-wrap: wrap;
+    margin-left: calc(var(--spacer) / -2);
+    margin-right: calc(var(--spacer) / -2);
+}
+
+.g-0 {
+    --spacer: 0;
 }
 
 .row[class*="row-cols-"] > * {
     flex: 0 0 auto;
     width: calc(100% / var(--row-cols-number));
+    padding-left: calc(var(--spacer) / 2);
+    padding-right: calc(var(--spacer) / 2);
 }
 
 .row-cols-1 {
@@ -51,6 +60,14 @@
 .row > [class*="col-"] {
     flex: 0 0 auto;
     width: calc(100% / var(--column-size) * var(--column-number));
+    padding-right: calc(var(--spacer) / 2);
+    padding-right: calc(var(--spacer) / 2);
+}
+
+.col {
+    flex: 1 0;
+    padding-right: calc(var(--spacer) / 2);
+    padding-right: calc(var(--spacer) / 2);
 }
 
 .col-1 {
