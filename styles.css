@@ -3,3 +3,12 @@
 ::after {
     box-sizing: border-box;
 }
+
+.item {
+    width: 33.3333%;
+    border: 1px dashed orange;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: system-ui, sans-serif;
+}
